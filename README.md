@@ -91,6 +91,7 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 ## Considerations
 <ol type="1">
 <li>Apex REST currently doesn't support requests of Content-Type multipart/form-data.</li>
+<li>For request data in either JSON or XML, valid values for Boolean parameters are: true, false (both of these are treated as case-insensitive), 1 and 0 (the numeric values, not strings of “1” or “0”). Any other values for Boolean parameters result in an error.</li>
 <li>Calls to Apex REST classes count against the organization's API governor limits.</li>
 <li>All standard Apex governor limits apply to Apex REST classes.</li>
 <li></li>
