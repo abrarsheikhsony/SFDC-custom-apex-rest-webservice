@@ -43,7 +43,6 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <ul>
 <li>Managed Package (if the "urlMapping" is "/MyRestResource/*") = https://instance.salesforce.com/services/apexrest/packageNamespace/MyRestResource/</li>
 <li>Unmanaged Pacakge (if the "urlMapping" is "/Account/*") = https://yoursalesforceinstance.salesforce.com/services/apexrest/Account/</li>
-<li></li>
 </ul>
 
 </li>
