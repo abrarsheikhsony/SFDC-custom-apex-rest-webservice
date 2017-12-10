@@ -41,7 +41,41 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 </ol>
 
 ## Apex REST Webservice Annotations, Actions and Details
-
+<table>
+	<tr>
+		<th colspan="3">Apex REST Annotations, associated Actions and Details</th>
+	</tr>
+	<tr>
+		<th>Annotation</th>
+		<th>Action</th>
+		<th>Details</th>
+	</tr>
+	<tr>
+		<td>@HttpGet</td>
+		<td>Read</td>
+		<td>Reads or retrieves records.</td>
+	</tr>
+	<tr>
+		<td>@HttpPost</td>
+		<td>Create</td>
+		<td>Creates records.</td>
+	</tr>
+	<tr>
+		<td>@HttpPatch</td>
+		<td>Update</td>
+		<td>Typically used to update fields in existing records.</td>
+	</tr>
+	<tr>
+		<td>@HttpPut</td>
+		<td>Upsert</td>
+		<td>Typically used to update existing records or create records.</td>
+	</tr>
+	<tr>
+		<td>@HttpDelete</td>
+		<td>Delete</td>
+		<td>Deletes records.</td>
+	</tr>
+</table>
 
 
 
