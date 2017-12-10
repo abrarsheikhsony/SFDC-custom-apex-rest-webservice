@@ -38,7 +38,15 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <li>A single Apex class annotated with @RestResource can't have multiple methods annotated with the same HTTP request method. For example, the same class can't have two methods annotated with @HttpGet.</li>
 <li>Methods annotated with @HttpGet or @HttpDelete should have no parameters. This is because GET and DELETE requests have no request body, so there's nothing to deserialize.</li>
 <li>The base endpoint should always be: <b>https://yoursalesforceinstance.salesforce.com/services/apexrest/</b></li>
-<li>The full endpoint will be: <b>https://yoursalesforceinstance.salesforce.com/services/apexrest/Account/</b> if the "urlMapping" will be: "/Account/*"</li>
+<li>The full endpoint will be for Managed and Unmanaged packages:
+
+<ul>
+<li>Managed Package (if the "urlMapping" is "/MyRestResource/*") = https://instance.salesforce.com/services/apexrest/packageNamespace/MyRestResource/</li>
+<li>Unmanaged Pacakge (if the "urlMapping" is "/Account/*") = https://yoursalesforceinstance.salesforce.com/services/apexrest/Account/</li>
+<li></li>
+</ul>
+
+</li>
 <li>The URL mapping is case-sensitive and can contain a wildcard character (*).</li>
 </ol>
 
