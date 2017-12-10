@@ -7,7 +7,7 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 
 <ol type="1">
 <li>What does REST stand for?</li>
-<li>How to create an Apex REST Webservice in Salesforce?</li>
+<li>How to create and expose an Apex REST Webservice?</li>
 <li>What are the methods available in Apex REST Webservice?</li>
 <li></li>
 <li>Useful Resources</li>
@@ -18,6 +18,11 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <ol type="1">
 <li>REST stands for Representational State Transfer.</li>
 <li>It returns response in "JSON", "XML", "Custom", and "CSV" format.</li>
+</ol>
+
+## How to create and expose an Apex REST Webservice?
+<ol type="1">
+<li>You can expose your Apex classes and methods by annotating your class with <b>"@RestResource"</b> annotation so that external applications can access your code and your application through the REST architecture.</li>
 </ol>
 
 
