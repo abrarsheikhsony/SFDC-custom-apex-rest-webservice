@@ -17,7 +17,7 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 
 <ol type="1">
 <li>REST stands for Representational State Transfer.</li>
-<li>It returns response in "JSON", "XML", "Custom", and "CSV" format.</li>
+<li>It returns response in "JSON", "XML", "Custom" format.</li>
 </ol>
 
 ## How to create and expose an Apex REST Webservice?
