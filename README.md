@@ -35,7 +35,8 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <li>@HttpDelete</li>
 </ul>
 </li>
-<li>You can use each annotation ONLY once in each Apex class.</li>
+<li>A single Apex class annotated with @RestResource can't have multiple methods annotated with the same HTTP request method. For example, the same class can't have two methods annotated with @HttpGet.</li>
+<li>Methods annotated with @HttpGet or @HttpDelete should have no parameters. This is because GET and DELETE requests have no request body, so there's nothing to deserialize.</li>
 <li>The base endpoint should always be: <b>https://yoursalesforceinstance.salesforce.com/services/apexrest/</b></li>
 <li>The full endpoint will be: <b>https://yoursalesforceinstance.salesforce.com/services/apexrest/Account/</b> if the "urlMapping" will be: "/Account/*"</li>
 <li>The URL mapping is case-sensitive and can contain a wildcard character (*).</li>
@@ -82,6 +83,7 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 
 ## Considerations
 <ol type="1">
+<li>Apex REST currently doesn't support requests of Content-Type multipart/form-data.</li>
 <li>Calls to Apex REST classes count against the organization's API governor limits.</li>
 <li>All standard Apex governor limits apply to Apex REST classes.</li>
 <li></li>
