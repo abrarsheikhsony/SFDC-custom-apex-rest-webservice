@@ -112,3 +112,68 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <li>https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_username_password_oauth_flow.htm</li>
 <li>https://developer.salesforce.com/page/Creating_REST_APIs_using_Apex_REST</li>
 </ol>
+
+
+
+## How to Test Custom Apex REST API?
+
+Username-Password OAuth Authentication Flow
+
+>>> Connected App
+Go to = Setup > App Setup > Create > Apps > in Connected Apps section > click New button
+
+>>> Give permission to Profile/Permission Set
+
+>>> Login in Apex Advanced REST Client as POST request
+https://login.salesforce.com/services/oauth2/token?grant_type=password&client_id=ABC9Y6d_Btp4xp5LtKju7EaUgfCIOBVV2zdH7D_GuYEh.ZyvCZZk77mE66CqhWA6RRB_FIpDynNqybmGbQyT&client_secret=3269503426159170320&username=myname@salesforce.com&password=mypasswithsecuritytoken
+
+>>> You will get following result/response
+{
+	"access_token": "ABC90000000gNcm!ARcAQFSMspT919_apVvl92lLGFxGlxsJPAnFW8.RBXJa27F4D0ToR3b9M3CiVLHglYrbG1yG6UFXtJMEcrq_ZI_QZJop7FFB",
+	"instance_url": "https://ap1.salesforce.com",
+	"id": "https://login.salesforce.com/id/ABC90000000gNcmEAE/999000000cLaiAAE",
+	"token_type": "Bearer",
+	"issued_at": "1232936302236",
+	"signature": "abcB6f49NJ1Fi0oXUdW5EbXY2s45+6PqeJIYR/xC+4A="
+}
+
+>>> Now do a "Get" call in Apex Advanced REST Client for "doGetAccount()" method
+
+URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService/0019000001KwyWt
+Parameters:::
+Header name = Authorization
+Header value = Bearer ABC90000000gNcm!ARcAQFSMspT919_apVvl92lLGFxGlxsJPAnFW8.RBXJa27F4D0ToR3b9M3CiVLHglYrbG1yG6UFXtJMEcrq_ZI_QZJop7FFB
+Header name = Content-Type
+Header value = application/json
+Header name = Accept
+Header value = application/xml
+
+>>> You will get following result/response
+{
+	"attributes": {
+		"type": "Account",
+		"url": "/services/data/v41.0/sobjects/Account/000000001KwyWtAAJ"
+	},
+	"BillingCountry": "United States",
+	"BillingCity": "San Francisco",
+	"BillingStreet": "The Landmark @ One Market, Suite 300",
+	"BillingPostalCode": "CA 94105",
+	"ShippingCountry": "United States",
+	"ShippingCity": "San Francisco",
+	"ShippingStreet": "The Landmark @ One Market, Suite 300",
+	"ShippingPostalCode": "CA 94105",
+	"Id": "0019000001KwyWtAAJ"
+}
+
+<response xsi:type="sObject">
+	<type>Account</type>
+	<Id>0009000001KwyWtAAJ</Id>
+	<BillingCountry>United States</BillingCountry>
+	<BillingCity>San Francisco</BillingCity>
+	<BillingStreet>The Landmark @ One Market, Suite 300</BillingStreet>
+	<BillingPostalCode>CA 94105</BillingPostalCode>
+	<ShippingCountry>United States</ShippingCountry>
+	<ShippingCity>San Francisco</ShippingCity>
+	<ShippingStreet>The Landmark @ One Market, Suite 300</ShippingStreet>
+	<ShippingPostalCode>CA 94105</ShippingPostalCode>
+</response>
