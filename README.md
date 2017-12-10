@@ -105,7 +105,9 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 ## Useful Resources
 <ol type="a">
 <li>https://trailhead.salesforce.com/en/modules/apex_integration_services/units/apex_integration_webservices</li>
-<li>https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_annotations_rest.htm</li>
 <li>https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_rest.htm</li>
+<li>https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_restcontext.htm#apex_methods_system_restcontext</li>
+<li>https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_restrequest.htm#apex_methods_system_restrequest</li>
+<li>https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_restresponse.htm#apex_methods_system_restresponse</li>
 <li>https://developer.salesforce.com/page/Creating_REST_APIs_using_Apex_REST</li>
 </ol>
