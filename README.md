@@ -8,7 +8,7 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <ol type="1">
 <li>What does REST stand for?</li>
 <li>How to create and expose an Apex REST Webservice?</li>
-<li>What are the methods available in Apex REST Webservice?</li>
+<li>Apex REST Webservice Annotations, Actions and Details</li>
 <li></li>
 <li>Useful Resources</li>
 </ol>
@@ -17,14 +17,14 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 
 <ol type="1">
 <li>REST stands for Representational State Transfer.</li>
-<li>It returns response in "JSON", "XML", "Custom" format.</li>
+<li>It returns response in <b>"JSON", "XML", "Custom"</b> format.</li>
 </ol>
 
 ## How to create and expose an Apex REST Webservice?
 <ol type="1">
 <li>You can expose your Apex classes and methods by annotating your class with <b>"@RestResource(urlMapping='/yourUrl')"</b> annotation so that external applications can access your code and your application through the REST architecture.</li>
-<li>An Apex class must be declared with access modifier "global".</li>
-<li>An Apex class method must be declared with access modifier "global static".</li>
+<li>An Apex class must be declared with access modifier <b>"global"</b>.</li>
+<li>An Apex class method must be declared with access modifier <b>"global static"</b>.</li>
 <li>Apex class methods must be annotated with one of the following annotations:
 <ul>
 <li>@HttpDelete</li>
@@ -34,9 +34,13 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <li>@HttpPut</li>
 </ul>
 </li>
-<li></li>
+<li>You can use each annotation ONLY once in each Apex class.</li>
+<li>The base endpoint should always be: <b>https://yoursalesforceinstance.salesforce.com/services/apexrest/</b></li>
+<li>The full endpoint will be: <b>https://yoursalesforceinstance.salesforce.com/services/apexrest/Account/</b> if the "urlMapping" will be: "/Account/*"</li>
+<li>The URL mapping is case-sensitive and can contain a wildcard character (*).</li>
 </ol>
 
+## Apex REST Webservice Annotations, Actions and Details
 
 
 
