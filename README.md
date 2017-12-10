@@ -27,11 +27,11 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <li>An Apex class method must be declared with access modifier <b>"global static"</b>.</li>
 <li>Apex class methods must be annotated with one of the following annotations:
 <ul>
-<li>@HttpDelete</li>
 <li>@HttpGet</li>
-<li>@HttpPatch</li>
 <li>@HttpPost</li>
+<li>@HttpPatch</li>
 <li>@HttpPut</li>
+<li>@HttpDelete</li>
 </ul>
 </li>
 <li>You can use each annotation ONLY once in each Apex class.</li>
