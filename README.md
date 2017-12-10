@@ -23,8 +23,11 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 ## How to create and expose an Apex REST Webservice?
 <ol type="1">
 <li>You can expose your Apex classes and methods by annotating your class with <b>"@RestResource"</b> annotation so that external applications can access your code and your application through the REST architecture.</li>
+<li>An Apex class must be declared with access modifier "global".</li>
+<li>An Apex class method must be declared with access modifier "global static".</li>
+<li></li>
+<li></li>
 </ol>
-
 
 ## Useful Resources
 <ol type="a">
