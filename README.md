@@ -10,6 +10,7 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <li>How to create and expose an Apex REST Webservice?</li>
 <li>Apex REST Webservice Annotations, Actions and Details</li>
 <li></li>
+<li>Considerations</li>
 <li>Useful Resources</li>
 </ol>
 
@@ -79,8 +80,12 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 
 
 
-
- 
+## Considerations
+<ol type="1">
+<li>Calls to Apex REST classes count against the organization's API governor limits.</li>
+<li>All standard Apex governor limits apply to Apex REST classes.</li>
+<li></li>
+</ol>
 
 ## Useful Resources
 <ol type="a">
