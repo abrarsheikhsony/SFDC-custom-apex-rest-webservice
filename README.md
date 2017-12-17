@@ -104,6 +104,13 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 ## Connected Apps
 A <a href="https://help.salesforce.com/articleView?id=connected_app_overview.htm" target="_blank" alt="connected app">connected app</a> integrates an application with Salesforce using APIs. Connected apps use standard SAML and OAuth protocols to authenticate, provide single sign-on, and provide tokens for use with Salesforce APIs. In addition to standard OAuth capabilities, connected apps allow Salesforce admins to set various security policies and have explicit control over who can use the corresponding apps.
 
+Salesforce uses the OAuth protocol to allow users of applications to securely access data without having to reveal username and password credentials. Supported <a href="https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm" target="_blank" alt="OAuth flows">OAuth flows</a> include:
+<ol type="1">
+<li>Web server flow, where the server can securely protect the consumer secret.</li>
+<li>User-agent flow, used by applications that cannot securely store the consumer secret.</li>
+<li>Username-password flow, where the application has direct access to user credentials.</li>
+</ol>
+
 <ol type="1">
 <li>To create a connected app go to Setup > App Setup > Create > Apps > in "Connected Apps" section > click New</li>
 <li></li>
@@ -122,6 +129,7 @@ A <a href="https://help.salesforce.com/articleView?id=connected_app_overview.htm
 <li>https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_restcontext.htm#apex_methods_system_restcontext</li>
 <li>https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_restrequest.htm#apex_methods_system_restrequest</li>
 <li>https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_restresponse.htm#apex_methods_system_restresponse</li>
-<li>https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_username_password_oauth_flow.htm</li>
+<li>https://help.salesforce.com/articleView?id=connected_app_overview.htm</li>
+<li>https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm</li>
 <li>https://developer.salesforce.com/page/Creating_REST_APIs_using_Apex_REST</li>
 </ol>
