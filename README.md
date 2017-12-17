@@ -106,13 +106,15 @@ A <a href="https://help.salesforce.com/articleView?id=connected_app_overview.htm
 
 Salesforce uses the OAuth protocol to allow users of applications to securely access data without having to reveal username and password credentials. Supported <a href="https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm" target="_blank" alt="OAuth flows">OAuth flows</a> include:
 <ol type="1">
-<li>Web server flow, where the server can securely protect the consumer secret.</li>
-<li>User-agent flow, used by applications that cannot securely store the consumer secret.</li>
-<li>Username-password flow, where the application has direct access to user credentials.</li>
+<li><b>Web server flow</b>, where the server can securely protect the consumer secret.</li>
+<li><b>User-agent flow</b>, used by applications that cannot securely store the consumer secret.</li>
+<li><b>Username-password flow</b>, where the application has direct access to user credentials.</li>
 </ol>
 
+## How to create a Connected App
+To create a connected app:
 <ol type="1">
-<li>To create a connected app go to Setup > App Setup > Create > Apps > in "Connected Apps" section > click New</li>
+<li>Go to <b>Setup > App Setup > Create > Apps > in "Connected Apps" section > click New</b></li>
 <li></li>
 </ol>
 
