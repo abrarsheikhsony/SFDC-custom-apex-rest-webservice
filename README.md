@@ -115,8 +115,7 @@ Salesforce uses the OAuth protocol to allow users of applications to securely ac
 To create a connected app:
 <ol type="1">
 <li>Go to <b>Setup > App Setup > Create > Apps > in "Connected Apps" section > click New</b></li>
-<li><img src="supportedimages/connectedapp1.png" /></li>
-<li><img src="supportedimages/connectedapp2.png" /></li>
+
 <li></li>
 </ol>
 
