@@ -99,8 +99,21 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <li>For request data in either JSON or XML, valid values for Boolean parameters are: true, false (both of these are treated as case-insensitive), 1 and 0 (the numeric values, not strings of “1” or “0”). Any other values for Boolean parameters result in an error.</li>
 <li>Calls to Apex REST classes count against the organization's API governor limits.</li>
 <li>All standard Apex governor limits apply to Apex REST classes.</li>
+</ol>
+
+## Connected Apps
+A <a href="https://help.salesforce.com/articleView?id=connected_app_overview.htm" target="_blank" alt="connected app">connected app</a> integrates an application with Salesforce using APIs. Connected apps use standard SAML and OAuth protocols to authenticate, provide single sign-on, and provide tokens for use with Salesforce APIs. In addition to standard OAuth capabilities, connected apps allow Salesforce admins to set various security policies and have explicit control over who can use the corresponding apps.
+
+<ol type="1">
+<li>To create a connected app go to Setup > App Setup > Create > Apps > in "Connected Apps" section > click New</li>
 <li></li>
 </ol>
+
+## How to Test Custom Apex REST API?
+
+
+## Test (@isTest) class for Custom Apex REST API
+
 
 ## Useful Resources
 <ol type="a">
@@ -112,7 +125,3 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <li>https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_username_password_oauth_flow.htm</li>
 <li>https://developer.salesforce.com/page/Creating_REST_APIs_using_Apex_REST</li>
 </ol>
-
-
-
-## How to Test Custom Apex REST API?
