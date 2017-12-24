@@ -173,6 +173,7 @@ Follow these steps to test an Apex custom REST service:
 
 ### Read a Record with @HTTPGet Method
 <ol type="1">
+<li><img src="supportedimages/HttpGet.png" /></li>	
 <li>Now do a "Get" call for "@HTTPGet" method</li>
 <ul>
 <li>HTTP Method = GET</li>	
