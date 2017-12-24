@@ -235,7 +235,7 @@ Follow these steps to test an Apex custom REST service:
 
 ### Create a Record with "@HttpPost" Method
 <ol type="1">
-<img src="supportedimages/HttpPost.png" />	
+<li><img src="supportedimages/HttpPost.png" /></li>	
 <li>HTTP Method = POST</li>	
 <li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService</li>
 <li>HTTP Request Body = 
@@ -310,23 +310,70 @@ Follow these steps to test an Apex custom REST service:
 
 ### Update a Record with "@HttpPatch" Method
 <ol type="1">
-<li></li>
-<li></li>
-<li></li>
+<li><img src="supportedimages/HttpPatch.png" /></li>
+<li>HTTP Method = POST</li>	
+<li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService</li>
+<li>HTTP Request Body = 
+
+```
+// In JSON
+{
+	"accountId" : "0019000001zQkHoAAK"
+}
+```
+
+```
+// In XML
+<?xml version="1.0" encoding="UTF-8" ?>
+<request>
+	<accountId>0019000001zQkHoAAK</accountId>
+</request>
+```
+
+</li>
+
+<li>HTTP Response Body = 
+
+```
+// In JSON
+"Salesforce.com Inc. UPDATED! UPDATED!"
+```
+
+```
+// In XML
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>Salesforce.com Inc. UPDATED!</response>
+```
+
+</li>
 </ol>
 
 ### Upsert a Record with "@HttpPut" Method
 <ol type="1">
-<li></li>
-<li></li>
-<li></li>
+<li><img src="supportedimages/HttpPatch.png" /></li>
+<li>HTTP Method = POST</li>	
+<li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService</li>
+<li>HTTP Request Body = 
+
+</li>
+
+<li>HTTP Response Body = 
+
+</li>
 </ol>
 
 ### Delete a Record with "@HttpDelete" Method
 <ol type="1">
-<li></li>
-<li></li>
-<li></li>
+<li><img src="supportedimages/HttpPatch.png" /></li>
+<li>HTTP Method = POST</li>	
+<li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService</li>
+<li>HTTP Request Body = 
+
+</li>
+
+<li>HTTP Response Body = 
+
+</li>
 </ol>
 
 
