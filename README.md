@@ -17,14 +17,14 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <li>Useful Resources</li>
 </ol>
 
-## What does REST stand for?
+## (1) What does REST stand for?
 
 <ol type="1">
 <li>REST stands for Representational State Transfer.</li>
 <li>It returns response in <b>"JSON", "XML", "Custom"</b> format.</li>
 </ol>
 
-## How to create and expose an Apex REST Webservice?
+## (2) How to create and expose an Apex REST Webservice?
 <ol type="1">
 <li>You can expose your Apex classes and methods by annotating your class with <b>"@RestResource(urlMapping='/yourUrl')"</b> annotation so that external applications can access your code and your application through the REST architecture.</li>
 <li>An Apex class must be declared with access modifier <b>"global"</b>.</li>
@@ -56,7 +56,7 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <li>The URL mapping is case-sensitive and can contain a wildcard character (*).</li>
 </ol>
 
-## Apex REST Webservice Annotations, Actions and Details
+## (3) Apex REST Webservice Annotations, Actions and Details
 <table>
 	<tr>
 		<th colspan="3">Apex REST Annotations, associated Actions and Details</th>
@@ -95,7 +95,7 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 
 
 
-## Considerations
+## (4) Considerations
 <ol type="1">
 <li>Apex REST currently doesn't support requests of Content-Type multipart/form-data.</li>
 <li>If you need to specify a null value for one of your parameters in your request data, you can either omit the parameter entirely or specify a null value. In JSON, you can specify null as the value. In XML, you must use the http://www.w3.org/2001/XMLSchema-instance namespace with a nil value.</li>
@@ -104,7 +104,7 @@ Here you will find the following details about Salesforce custom Apex REST Webse
 <li>All standard Apex governor limits apply to Apex REST classes.</li>
 </ol>
 
-## Connected Apps
+## (5) Connected Apps
 A <a href="https://help.salesforce.com/articleView?id=connected_app_overview.htm" target="_blank" alt="connected app">connected app</a> integrates an application with Salesforce using APIs. Connected apps use standard SAML and OAuth protocols to authenticate, provide single sign-on, and provide tokens for use with Salesforce APIs. In addition to standard OAuth capabilities, connected apps allow Salesforce admins to set various security policies and have explicit control over who can use the corresponding apps.
 
 Salesforce uses the OAuth protocol to allow users of applications to securely access data without having to reveal username and password credentials. Supported <a href="https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm" target="_blank" alt="OAuth flows">OAuth flows</a> include:
@@ -114,7 +114,7 @@ Salesforce uses the OAuth protocol to allow users of applications to securely ac
 <li><b>Username-password flow</b>, where the application has direct access to user credentials.</li>
 </ol>
 
-## How to create a Connected App
+## (6) How to create a Connected App
 To create a connected app:
 <ol type="1">
 <li>Go to <b>Setup > App Setup > Create > Apps > in "Connected Apps" section > click New</b></li>
@@ -123,7 +123,7 @@ To create a connected app:
 <li><img src="supportedimages/connectedapp3.png" /></li>
 </ol>
 
-## How to Test Custom Apex REST API?
+## (7) How to Test Custom Apex REST API?
 For Testing purpose you can use following publicly available services. Most of them are free!
 <ol type="1">
 <li>Advanced REST Client (https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)</li>
@@ -135,7 +135,8 @@ In this example:
 <li>"Username-Password OAuth Authentication Flow" for authentication the user using Connected App</li>
 </ol>
 
-Follow these steps to test a "@HttpGet" REST service in Apex class of Salesforce:
+### OAuth Authentication
+Follow these steps to test an Apex custom REST service:
 <ol type="1">
 <li>Install <a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo" target="_blank" alt="Advanced REST Client">Advanced REST Client</a></li>
 <li>Logged In into Advanced REST Client</li>
@@ -168,6 +169,10 @@ Follow these steps to test a "@HttpGet" REST service in Apex class of Salesforce
 ```
 </li>
 <li><img src="supportedimages/ARC3.png" /></li>
+</ol>
+
+### Read a Record with @HTTPGet Method
+<ol type="1">
 <li>Now do a "Get" call for "@HTTPGet" method</li>
 <ul>
 <li>HTTP Method = GET</li>	
@@ -224,10 +229,12 @@ Follow these steps to test a "@HttpGet" REST service in Apex class of Salesforce
 </li>
 </ol>
 
-## Test (@isTest) class for Custom Apex REST API
 
 
-## Useful Resources
+## (8) Test (@isTest) class for Custom Apex REST API
+
+
+## (9) Useful Resources
 <ol type="a">
 <li>https://trailhead.salesforce.com/en/modules/apex_integration_services/units/apex_integration_webservices</li>
 <li>https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_rest.htm</li>
