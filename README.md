@@ -232,6 +232,41 @@ Follow these steps to test an Apex custom REST service:
 
 
 
+
+### Create a Record with "@HttpPost" Method
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+
+
+
+
+### Update a Record with "@HttpPatch" Method
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+
+### Upsert a Record with "@HttpPut" Method
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+
+### Delete a Record with "@HttpDelete" Method
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+
+
+
+
 ## (8) Test (@isTest) class for Custom Apex REST API
 
 
