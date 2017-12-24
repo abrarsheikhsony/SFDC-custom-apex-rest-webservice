@@ -311,7 +311,7 @@ Follow these steps to test an Apex custom REST service:
 ### Update a Record with "@HttpPatch" Method
 <ol type="1">
 <li><img src="supportedimages/HttpPatch.png" /></li>
-<li>HTTP Method = POST</li>	
+<li>HTTP Method = PATCH</li>	
 <li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService</li>
 <li>HTTP Request Body = 
 
@@ -350,34 +350,101 @@ Follow these steps to test an Apex custom REST service:
 
 ### Upsert a Record with "@HttpPut" Method
 <ol type="1">
-<li><img src="supportedimages/HttpPatch.png" /></li>
-<li>HTTP Method = POST</li>	
+<li><img src="supportedimages/HttpPut.png" /></li>
+<li>HTTP Method = PUT</li>	
 <li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService</li>
 <li>HTTP Request Body = 
+
+```
+// In JSON
+{
+	"name" : "Salesforce.com Inc.",
+	"externalId" : "1001"
+}
+```
+
+```
+// In XML
+<?xml version="1.0" encoding="UTF-8" ?>
+<request>
+	<name>Salesforce.com Inc.</name>
+	<externalId>1001</externalId>
+</request>
+```
 
 </li>
 
 <li>HTTP Response Body = 
+
+```
+// In JSON
+{
+	"attributes": {
+		"type": "Account",
+		"url": "/services/data/v41.0/sobjects/Account/0019000001zQkJGAA0"
+	},
+	"ExternalId__c": "1001",
+	"Name": "Salesforce.com Inc.",
+	"BillingCountry": "United States",
+	"BillingState": "California",
+	"BillingCity": "San Francisco",
+	"BillingStreet": "The Landmark @ One Market, Suite 300",
+	"BillingPostalCode": "CA 94105",
+	"Industry": "Technology",
+	"Phone": "1-800-NO-SOFTWARE",
+	"Fax": "415-901-7040",
+	"Website": "https://www.salesforce.com",
+	"Rating": "Hot",
+	"Type": "Prospect",
+	"Id": "0019000001zQkJGAA0"
+}
+```
+
+```
+// In XML
+<?xml version="1.0" encoding="UTF-8" ?>
+<response xsi:type="sObject">
+	<type>Account</type>
+	<Id>0019000001zQkKEAA0</Id>
+	<ExternalId__c>1003</ExternalId__c>
+	<Name>Salesforce.com Inc.</Name>
+	<BillingCountry>United States</BillingCountry>
+	<BillingState>California</BillingState>
+	<BillingCity>San Francisco</BillingCity>
+	<BillingStreet>The Landmark @ One Market, Suite 300</BillingStreet>
+	<BillingPostalCode>CA 94105</BillingPostalCode>
+	<Industry>Technology</Industry>
+	<Phone>1-800-NO-SOFTWARE</Phone>
+	<Fax>415-901-7040</Fax>
+	<Website>https://www.salesforce.com</Website>
+	<Rating>Hot</Rating>
+	<Type>Prospect</Type>
+</response>
+```
 
 </li>
 </ol>
 
 ### Delete a Record with "@HttpDelete" Method
 <ol type="1">
-<li><img src="supportedimages/HttpPatch.png" /></li>
-<li>HTTP Method = POST</li>	
-<li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService</li>
-<li>HTTP Request Body = 
-
-</li>
-
+<li><img src="supportedimages/HttpDelete.png" /></li>
+<li>HTTP Method = DELETE</li>	
+<li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService?Id={Record Id here}</li>
 <li>HTTP Response Body = 
+
+```
+// In JSON
+"Success"
+```
+
+```
+// In XML
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>Success</response>
+```
 
 </li>
 </ol>
-
-
-
 
 ## (8) Test (@isTest) class for Custom Apex REST API
 
