@@ -149,9 +149,70 @@ Follow these steps to test a "@HttpGet" REST service in Apex class of Salesforce
 <li>client_secret = Consumer Secret (client_secret) from your Connected App</li>
 <li>username = Your Salesforce Username</li>
 <li>password = Your Salesforce UserPassword concatenate with Security Token</li>
+<li>The complete URL should look like as this = https://login.salesforce.com/services/oauth2/token?grant_type=password&client_id={Consumer Key}&client_secret={Consumer Secret}&username=test@salesforce.com&password={password+securitytoken}</li>
 <li><img src="supportedimages/ARC2.png" /></li>
 </ul>
-<li></li>
+<li>Click Send</li>	
+<li>You will get a response by Salesforce</li>
+<li>
+{
+	"access_token": "00ABC90000000gNcm!ARcAQOxof.l34GtM3iLpD.hSfBZHGTEIbV9BtEsfP4VeomlgsLL84unDpah8._3l9o59W7JgzzHBO5fGNto2NtTt8k_v526o",
+	"instance_url": "https://ap1.salesforce.com",
+	"id": "https://login.salesforce.com/id/00ABC90000000gNcmEAE/00590000000cLaiABC",
+	"token_type": "Bearer",
+	"issued_at": "9994123281476",
+	"signature": "abcADhXpEx0ZwvR+9OGLc+A2ki/57L4NOLNh1KQLbWI="
+}	
+</li>
+<li><img src="supportedimages/ARC3.png" /></li>
+<li>Now do a "Get" call for "@HTTPGet" method</li>
+<ul>
+<li>HTTP Method = GET</li>	
+<li>instance_url"/services/apexrest/AccountRESTService/{Salesforce AccountId Here}"</li>
+<li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService/0019000001KwyWt</li>
+<li>Authorization = Bearer(space)access_token</li>
+<li>Authorization = Bearer 00ABC90000000gNcm!ARcAQOxof.l34GtM3iLpD.hSfBZHGTEIbV9BtEsfP4VeomlgsLL84unDpah8._3l9o59W7JgzzHBO5fGNto2NtTt8k_v526o</li>
+<li>Content-Type = application/json</li>
+<li>Accept = application/xml</li>
+<li><img src="supportedimages/ARC4.png" /></li>
+</ul>
+<li>Click Send</li>
+<li>You will get response in XML as below</li>
+<li><img src="supportedimages/ARC5.png" /></li>
+<li>
+<?xml version="1.0" encoding="UTF-8" ?>
+<response xsi:type="sObject">
+	<type>Account</type>
+	<Id>0019000001KwyWtAAJ</Id>
+	<BillingCountry>United States</BillingCountry>
+	<BillingCity>San Francisco</BillingCity>
+	<BillingStreet>The Landmark @ One Market, Suite 300</BillingStreet>
+	<BillingPostalCode>CA 94105</BillingPostalCode>
+	<ShippingCountry>United States</ShippingCountry>
+	<ShippingCity>San Francisco</ShippingCity>
+	<ShippingStreet>The Landmark @ One Market, Suite 300</ShippingStreet>
+	<ShippingPostalCode>CA 94105</ShippingPostalCode>
+</response>
+</li>	
+<li>You will get response in JSON as below</li>
+<li><img src="supportedimages/ARC6.png" /></li>
+<li>
+{
+	"attributes": {
+		"type": "Account",
+		"url": "/services/data/v41.0/sobjects/Account/0019000001KwyWtAAJ"
+	},
+	"BillingCountry": "United States",
+	"BillingCity": "San Francisco",
+	"BillingStreet": "The Landmark @ One Market, Suite 300",
+	"BillingPostalCode": "CA 94105",
+	"ShippingCountry": "United States",
+	"ShippingCity": "San Francisco",
+	"ShippingStreet": "The Landmark @ One Market, Suite 300",
+	"ShippingPostalCode": "CA 94105",
+	"Id": "0019000001KwyWtAAJ"
+}
+</li>
 </ol>
 
 ## Test (@isTest) class for Custom Apex REST API
