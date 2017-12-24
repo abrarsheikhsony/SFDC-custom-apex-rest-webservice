@@ -235,9 +235,74 @@ Follow these steps to test an Apex custom REST service:
 
 ### Create a Record with "@HttpPost" Method
 <ol type="1">
-<li></li>
-<li></li>
-<li></li>
+<img src="supportedimages/HttpPost.png" />	
+<li>HTTP Method = POST</li>	
+<li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService</li>
+<li>HTTP Request Body = 
+
+```
+// In JSON
+{
+	"name" : "Salesforce.com Inc."
+}
+```
+
+```
+// In XML
+<?xml version="1.0" encoding="UTF-8" ?>
+<request>
+	<name>Salesforce.com Inc.</name>
+</request>
+```
+
+</li>
+<li>HTTP Response Body = 
+
+```
+// In JSON
+{
+	"attributes": {
+		"type": "Account",
+		"url": "/services/data/v41.0/sobjects/Account/0019000001zQkHPAA0"
+	},
+	"Name": "Salesforce.com Inc.",
+	"BillingCountry": "United States",
+	"BillingState": "California",
+	"BillingCity": "San Francisco",
+	"BillingStreet": "The Landmark @ One Market, Suite 300",
+	"BillingPostalCode": "CA 94105",
+	"Industry": "Technology",
+	"Phone": "1-800-NO-SOFTWARE",
+	"Fax": "415-901-7040",
+	"Website": "https://www.salesforce.com",
+	"Rating": "Hot",
+	"Type": "Prospect",
+	"Id": "0019000001zQkHPAA0"
+}
+```
+
+```
+// In XML
+<?xml version="1.0" encoding="UTF-8" ?>
+<response xsi:type="sObject">
+	<type>Account</type>
+	<Id>0019000001zQkHFAA0</Id>
+	<Name>Salesforce.com Inc.</Name>
+	<BillingCountry>United States</BillingCountry>
+	<BillingState>California</BillingState>
+	<BillingCity>San Francisco</BillingCity>
+	<BillingStreet>The Landmark @ One Market, Suite 300</BillingStreet>
+	<BillingPostalCode>CA 94105</BillingPostalCode>
+	<Industry>Technology</Industry>
+	<Phone>1-800-NO-SOFTWARE</Phone>
+	<Fax>415-901-7040</Fax>
+	<Website>https://www.salesforce.com</Website>
+	<Rating>Hot</Rating>
+	<Type>Prospect</Type>
+</response>
+```
+
+</li>
 </ol>
 
 
