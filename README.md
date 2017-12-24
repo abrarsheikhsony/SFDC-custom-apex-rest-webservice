@@ -235,6 +235,7 @@ Follow these steps to test an Apex custom REST service:
 
 ### Create a Record with "@HttpPost" Method
 <ol type="1">
+<img src="supportedimages/HttpPost.png" />	
 <li>HTTP Method = POST</li>	
 <li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService</li>
 <li>HTTP Request Body = 
