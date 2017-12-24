@@ -181,6 +181,8 @@ Follow these steps to test a "@HttpGet" REST service in Apex class of Salesforce
 <li><img src="supportedimages/ARC5.png" /></li>
 <li>
 <?xml version="1.0" encoding="UTF-8" ?>
+
+```
 <response xsi:type="sObject">
 	<type>Account</type>
 	<Id>0019000001KwyWtAAJ</Id>
@@ -193,10 +195,13 @@ Follow these steps to test a "@HttpGet" REST service in Apex class of Salesforce
 	<ShippingStreet>The Landmark @ One Market, Suite 300</ShippingStreet>
 	<ShippingPostalCode>CA 94105</ShippingPostalCode>
 </response>
+```
 </li>	
 <li>You will get response in JSON as below</li>
 <li><img src="supportedimages/ARC6.png" /></li>
 <li>
+
+```
 {
 	"attributes": {
 		"type": "Account",
@@ -212,6 +217,7 @@ Follow these steps to test a "@HttpGet" REST service in Apex class of Salesforce
 	"ShippingPostalCode": "CA 94105",
 	"Id": "0019000001KwyWtAAJ"
 }
+```
 </li>
 </ol>
 
