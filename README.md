@@ -124,10 +124,15 @@ To create a connected app:
 </ol>
 
 ## How to Test Custom Apex REST API?
-For Testing purpose you can use following publicly available services. Most of them are free! In this example "Advanced REST Client (a chrome browser extension)" has been used for testing the Apex REST Service.
+For Testing purpose you can use following publicly available services. Most of them are free!
 <ol type="1">
 <li>Advanced REST Client (https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)</li>
 <li>Salesforce Workbench (https://workbench.developerforce.com/login.php)</li>
+</ol>
+In this example:
+<ol type="1">
+<li>"Advanced REST Client (a chrome browser extension)" has been used for testing the Apex REST Service</li>
+<li>"Username-Password OAuth Authentication Flow" for authentication the user using Connected App</li>
 </ol>
 
 ## Test (@isTest) class for Custom Apex REST API
