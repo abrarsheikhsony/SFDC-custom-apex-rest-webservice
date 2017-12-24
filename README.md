@@ -155,6 +155,8 @@ Follow these steps to test a "@HttpGet" REST service in Apex class of Salesforce
 <li>Click Send</li>	
 <li>You will get a response by Salesforce</li>
 <li>
+
+```
 {
 	"access_token": "00ABC90000000gNcm!ARcAQOxof.l34GtM3iLpD.hSfBZHGTEIbV9BtEsfP4VeomlgsLL84unDpah8._3l9o59W7JgzzHBO5fGNto2NtTt8k_v526o",
 	"instance_url": "https://ap1.salesforce.com",
@@ -162,7 +164,8 @@ Follow these steps to test a "@HttpGet" REST service in Apex class of Salesforce
 	"token_type": "Bearer",
 	"issued_at": "9994123281476",
 	"signature": "abcADhXpEx0ZwvR+9OGLc+A2ki/57L4NOLNh1KQLbWI="
-}	
+}
+```
 </li>
 <li><img src="supportedimages/ARC3.png" /></li>
 <li>Now do a "Get" call for "@HTTPGet" method</li>
