@@ -171,8 +171,9 @@ Follow these steps to test an Apex custom REST service:
 <li><img src="supportedimages/ARC3.png" /></li>
 </ol>
 
-### Read a Record with @HTTPGet Method
+### Read a Record with "@HTTPGet" Method
 <ol type="1">
+<li><img src="supportedimages/HttpGet.png" /></li>	
 <li>Now do a "Get" call for "@HTTPGet" method</li>
 <ul>
 <li>HTTP Method = GET</li>	
@@ -228,6 +229,41 @@ Follow these steps to test an Apex custom REST service:
 ```
 </li>
 </ol>
+
+
+
+
+### Create a Record with "@HttpPost" Method
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+
+
+
+
+### Update a Record with "@HttpPatch" Method
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+
+### Upsert a Record with "@HttpPut" Method
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+
+### Delete a Record with "@HttpDelete" Method
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+</ol>
+
 
 
 
