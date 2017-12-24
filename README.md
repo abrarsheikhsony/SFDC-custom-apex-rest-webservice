@@ -135,6 +135,22 @@ In this example:
 <li>"Username-Password OAuth Authentication Flow" for authentication the user using Connected App</li>
 </ol>
 
+Follow these steps to test a "@HttpGet" REST service in Apex class of Salesforce:
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+
 ## Test (@isTest) class for Custom Apex REST API
 
 
