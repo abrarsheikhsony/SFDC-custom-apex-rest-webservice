@@ -120,7 +120,7 @@ To create a connected app:
 <li>Go to <b>Setup > App Setup > Create > Apps > in "Connected Apps" section > click New</b></li>
 <li><img src="supportedimages/connectedapp1.png" /></li>
 <li><img src="supportedimages/connectedapp2.png" /></li>
-<li></li>
+<li><img src="supportedimages/connectedapp3.png" /></li>
 </ol>
 
 ## How to Test Custom Apex REST API?
@@ -137,17 +137,20 @@ In this example:
 
 Follow these steps to test a "@HttpGet" REST service in Apex class of Salesforce:
 <ol type="1">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>Install <a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo" target="_blank" alt="Advanced REST Client">Advanced REST Client</a></li>
+<li>Logged In into Advanced REST Client</li>
+<li><img src="supportedimages/ARC1.png" /></li>
+<li>Authenticate User using Connected App (Callback URL, Consumer Key (client_id), Consumer Secret (client_secret)) and Username-Password OAuth Authentication flow. Set the values in Advanced REST Client as below:</li>
+<ul>	
+<li>HTTP Method = POST</li>
+<li>HTTP Request URl = https://login.salesforce.com/services/oauth2/token</li>
+<li>grant_type = password</li>
+<li>client_id = Consumer Key (client_id) from your Connected App</li>
+<li>client_secret = Consumer Secret (client_secret) from your Connected App</li>
+<li>username = Your Salesforce Username</li>
+<li>password = Your Salesforce UserPassword concatenate with Security Token</li>
+<li><img src="supportedimages/ARC2.png" /></li>
+</ul>
 <li></li>
 </ol>
 
