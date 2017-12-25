@@ -369,6 +369,114 @@ Follow these steps to test an Apex custom REST service:
 </Errors>
 ```
 
+<li><b>For XML to work, you need to slightly change the strcuture of the "AccountWrapper" class</b></li>
+<li><img src="supportedimages/AccountWrapper_XML.png" /></li>
+<li><img src="supportedimages/HttpGet_Return_List_AccountWrapper_XML.png" /></li>
+<li><b>Note: Both 15 or 18 Digit Salesforce Record Id works!</b></li>
+<li>HTTP Method = GET</li>	
+<li>URL = https://ap1.salesforce.com/services/apexrest/CustomRESTService/</li>
+<li>HTTP Response Body
+
+```
+// In JSON
+{
+	"lstAccountRecords": 
+	[
+		{
+			"accountWebsite": "https://www.salesforce.com",
+			"accountType": "Prospect",
+			"accountShippingStreet": "The Landmark @ One Market, Suite 300",
+			"accountShippingState": "California",
+			"accountShippingPostalCode": "CA 94105",
+			"accountShippingCountry": "United States",
+			"accountShippingCity": "San Francisco",
+			"accountRating": "Hot",
+			"accountPhone": "1-800-NO-SOFTWARE",
+			"accountName": "1. Salesforce.com Inc.",
+			"accountIndustry": "Technology",
+			"accountFax": "(415) 901-7040",
+			"accountExternalId": "1001",
+			"accountDescription": "The #1 Cloud Computing Software in the world!",
+			"accountBillingStreet": "The Landmark @ One Market, Suite 300",
+			"accountBillingState": "California",
+			"accountBillingPostalCode": "CA 94105",
+			"accountBillingCountry": "United States",
+			"accountBillingCity": "San Francisco"
+		},
+		{
+			"accountWebsite": "https://www.salesforce.com",
+			"accountType": "Prospect",
+			"accountShippingStreet": "The Landmark @ One Market, Suite 300",
+			"accountShippingState": "California",
+			"accountShippingPostalCode": "CA 94105",
+			"accountShippingCountry": "United States",
+			"accountShippingCity": "San Francisco",
+			"accountRating": "Hot",
+			"accountPhone": "1-800-NO-SOFTWARE",
+			"accountName": "2. Salesforce.com Inc.",
+			"accountIndustry": "Technology",
+			"accountFax": "(415) 901-7040",
+			"accountExternalId": "1002",
+			"accountDescription": "The #1 Cloud Computing Software in the world!",
+			"accountBillingStreet": "The Landmark @ One Market, Suite 300",
+			"accountBillingState": "California",
+			"accountBillingPostalCode": "CA 94105",
+			"accountBillingCountry": "United States",
+			"accountBillingCity": "San Francisco"
+		}
+	],
+}
+```
+
+```
+// In XML
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+	<AccountWrapper:lstAccountRecords>
+		<AccountWrapper:accountBillingCity>San Francisco</AccountWrapper:accountBillingCity>
+		<AccountWrapper:accountBillingCountry>United States</AccountWrapper:accountBillingCountry>
+		<AccountWrapper:accountBillingPostalCode>CA 94105</AccountWrapper:accountBillingPostalCode>
+		<AccountWrapper:accountBillingState>California</AccountWrapper:accountBillingState>
+		<AccountWrapper:accountBillingStreet>The Landmark @ One Market, Suite 300</AccountWrapper:accountBillingStreet>
+		<AccountWrapper:accountDescription>The #1 Cloud Computing Software in the world!</AccountWrapper:accountDescription>
+		<AccountWrapper:accountExternalId>1001</AccountWrapper:accountExternalId>
+		<AccountWrapper:accountFax>(415) 901-7040</AccountWrapper:accountFax>
+		<AccountWrapper:accountIndustry>Technology</AccountWrapper:accountIndustry>
+		<AccountWrapper:accountName>1. Salesforce.com Inc.</AccountWrapper:accountName>
+		<AccountWrapper:accountPhone>1-800-NO-SOFTWARE</AccountWrapper:accountPhone>
+		<AccountWrapper:accountRating>Hot</AccountWrapper:accountRating>
+		<AccountWrapper:accountShippingCity>San Francisco</AccountWrapper:accountShippingCity>
+		<AccountWrapper:accountShippingCountry>United States</AccountWrapper:accountShippingCountry>
+		<AccountWrapper:accountShippingPostalCode>CA 94105</AccountWrapper:accountShippingPostalCode>
+		<AccountWrapper:accountShippingState>California</AccountWrapper:accountShippingState>
+		<AccountWrapper:accountShippingStreet>The Landmark @ One Market, Suite 300</AccountWrapper:accountShippingStreet>
+		<AccountWrapper:accountType>Prospect</AccountWrapper:accountType>
+		<AccountWrapper:accountWebsite>https://www.salesforce.com</AccountWrapper:accountWebsite>
+	</AccountWrapper:lstAccountRecords>
+	<AccountWrapper:lstAccountRecords>
+		<AccountWrapper:accountBillingCity>San Francisco</AccountWrapper:accountBillingCity>
+		<AccountWrapper:accountBillingCountry>United States</AccountWrapper:accountBillingCountry>
+		<AccountWrapper:accountBillingPostalCode>CA 94105</AccountWrapper:accountBillingPostalCode>
+		<AccountWrapper:accountBillingState>California</AccountWrapper:accountBillingState>
+		<AccountWrapper:accountBillingStreet>The Landmark @ One Market, Suite 300</AccountWrapper:accountBillingStreet>
+		<AccountWrapper:accountDescription>The #1 Cloud Computing Software in the world!</AccountWrapper:accountDescription>
+		<AccountWrapper:accountExternalId>1002</AccountWrapper:accountExternalId>
+		<AccountWrapper:accountFax>(415) 901-7040</AccountWrapper:accountFax>
+		<AccountWrapper:accountIndustry>Technology</AccountWrapper:accountIndustry>
+		<AccountWrapper:accountName>2. Salesforce.com Inc.</AccountWrapper:accountName>
+		<AccountWrapper:accountPhone>1-800-NO-SOFTWARE</AccountWrapper:accountPhone>
+		<AccountWrapper:accountRating>Hot</AccountWrapper:accountRating>
+		<AccountWrapper:accountShippingCity>San Francisco</AccountWrapper:accountShippingCity>
+		<AccountWrapper:accountShippingCountry>United States</AccountWrapper:accountShippingCountry>
+		<AccountWrapper:accountShippingPostalCode>CA 94105</AccountWrapper:accountShippingPostalCode>
+		<AccountWrapper:accountShippingState>California</AccountWrapper:accountShippingState>
+		<AccountWrapper:accountShippingStreet>The Landmark @ One Market, Suite 300</AccountWrapper:accountShippingStreet>
+		<AccountWrapper:accountType>Prospect</AccountWrapper:accountType>
+		<AccountWrapper:accountWebsite>https://www.salesforce.com</AccountWrapper:accountWebsite>
+	</AccountWrapper:lstAccountRecords>
+</response>
+```
+
 </li>
 </ol>
 
