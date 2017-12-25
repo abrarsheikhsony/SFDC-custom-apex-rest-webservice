@@ -234,6 +234,7 @@ Follow these steps to test an Apex custom REST service:
 ### Read a Record with "@HTTPGet" Method
 #### Return a Custom Account Wrapper Class Record
 <ol type="1">
+<li><b>Note: All wrapper class variables must be declared with "global" access modifier otherwise you will get an error "global methods do not support return type of AccountWrapper"</b></li>	
 <li><img src="supportedimages/AccountWrapper.png" /></li>
 <li><img src="supportedimages/HttpGet_Return_AccountWrapper.png" /></li>
 <li><b>Note: Both 15 or 18 Digit Salesforce Record Id works!</b></li>
@@ -295,16 +296,79 @@ Follow these steps to test an Apex custom REST service:
 </li>
 </ol>
 
-
 ### Read a Record with "@HTTPGet" Method
 #### Return List of Custom Account Wrapper Class Records
 <ol type="1">
+<li><b>Note: All wrapper class variables must be declared with "global" access modifier otherwise you will get an error "global methods do not support return type of AccountWrapper"</b></li>
 <li><img src="supportedimages/AccountWrapper.png" /></li>
-<li><img src="supportedimages/HttpGet_Return_AccountWrapper.png" /></li>
+<li><img src="supportedimages/HttpGet_Return_List_AccountWrapper.png" /></li>
 <li><b>Note: Both 15 or 18 Digit Salesforce Record Id works!</b></li>
 <li>HTTP Method = GET</li>	
-<li>URL = https://ap1.salesforce.com/services/apexrest/CustomRESTService/{Salesforce AccountId Here}</li>
+<li>URL = https://ap1.salesforce.com/services/apexrest/CustomRESTService/</li>
 <li>HTTP Response Body
+
+```
+// In JSON
+[
+	{
+		"accountWebsite": "https://www.salesforce.com",
+		"accountType": "Prospect",
+		"accountShippingStreet": "The Landmark @ One Market, Suite 300",
+		"accountShippingState": "California",
+		"accountShippingPostalCode": "CA 94105",
+		"accountShippingCountry": "United States",
+		"accountShippingCity": "San Francisco",
+		"accountRating": "Hot",
+		"accountPhone": "1-800-NO-SOFTWARE",
+		"accountName": "1. Salesforce.com Inc.",
+		"accountIndustry": "Technology",
+		"accountFax": "(415) 901-7040",
+		"accountExternalId": "1001",
+		"accountDescription": "The #1 Cloud Computing Software in the world!",
+		"accountBillingStreet": "The Landmark @ One Market, Suite 300",
+		"accountBillingState": "California",
+		"accountBillingPostalCode": "CA 94105",
+		"accountBillingCountry": "United States",
+		"accountBillingCity": "San Francisco"
+	},
+	{
+		"accountWebsite": "https://www.salesforce.com",
+		"accountType": "Prospect",
+		"accountShippingStreet": "The Landmark @ One Market, Suite 300",
+		"accountShippingState": "California",
+		"accountShippingPostalCode": "CA 94105",
+		"accountShippingCountry": "United States",
+		"accountShippingCity": "San Francisco",
+		"accountRating": "Hot",
+		"accountPhone": "1-800-NO-SOFTWARE",
+		"accountName": "2. Salesforce.com Inc.",
+		"accountIndustry": "Technology",
+		"accountFax": "(415) 901-7040",
+		"accountExternalId": "1002",
+		"accountDescription": "The #1 Cloud Computing Software in the world!",
+		"accountBillingStreet": "The Landmark @ One Market, Suite 300",
+		"accountBillingState": "California",
+		"accountBillingPostalCode": "CA 94105",
+		"accountBillingCountry": "United States",
+		"accountBillingCity": "San Francisco"
+	}
+]
+```
+
+```
+// In XML, you will get an error because:
+(1) The current structure of the "AccountWrapper" does not fit according to the XML structure rules.
+(2) As XML traverse items based on nodes and you don't have a parent node to hold "AccountWrapper".
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<Errors>
+	<Error>
+		<errorCode>NOT_ACCEPTABLE</errorCode>
+		<message>Unsupported return type for XML: List<AccountWrapper></message>
+	</Error>
+</Errors>
+```
+
 </li>
 </ol>
 
