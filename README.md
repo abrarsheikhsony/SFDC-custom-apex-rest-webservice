@@ -172,10 +172,11 @@ Follow these steps to test an Apex custom REST service:
 </ol>
 
 ### Read a Record with "@HTTPGet" Method
+#### Return Standard Account Record
 <ol type="1">
-<li><img src="supportedimages/HttpGet.png" /></li>	
-<li>Now do a "Get" call for "@HTTPGet" method</li>
+<li><img src="supportedimages/HttpGet.png" /></li>
 <ul>
+<li><b>Note: Both 15 or 18 Digit Salesforce Record Id works!</b></li>	
 <li>HTTP Method = GET</li>	
 <li>instance_url"/services/apexrest/AccountRESTService/{Salesforce AccountId Here}"</li>
 <li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService/0019000001KwyWt</li>
@@ -230,10 +231,95 @@ Follow these steps to test an Apex custom REST service:
 </li>
 </ol>
 
+### Read a Record with "@HTTPGet" Method
+#### Return a Custom Account Wrapper Class Record
+<ol type="1">
+<li><img src="supportedimages/AccountWrapper.png" /></li>
+<li><img src="supportedimages/HttpGet_Return_AccountWrapper.png" /></li>
+<li><b>Note: Both 15 or 18 Digit Salesforce Record Id works!</b></li>
+<li>HTTP Method = GET</li>	
+<li>URL = https://ap1.salesforce.com/services/apexrest/CustomRESTService/{Salesforce AccountId Here}</li>
+<li>HTTP Response Body
+
+```
+// In JSON
+{
+	"accountWebsite": "https://www.salesforce.com",
+	"accountType": "Prospect",
+	"accountShippingStreet": null,
+	"accountShippingState": null,
+	"accountShippingPostalCode": null,
+	"accountShippingCountry": null,
+	"accountShippingCity": null,
+	"accountRating": "Hot",
+	"accountPhone": "1-800-NO-SOFTWARE",
+	"accountName": "Salesforce.com Inc.",
+	"accountIndustry": "Technology",
+	"accountFax": "(415) 901-7040",
+	"accountExternalId": "1001",
+	"accountDescription": "Salesforce.com Inc.",
+	"accountBillingStreet": "The Landmark @ One Market, Suite 300",
+	"accountBillingState": "California",
+	"accountBillingPostalCode": "CA 94105",
+	"accountBillingCountry": "United States",
+	"accountBillingCity": "San Francisco"
+}
+```
+
+```
+// In XML
+<?xml version="1.0" encoding="UTF-8" ?>
+<response>
+	<AccountWrapper:accountBillingCity>San Francisco</AccountWrapper:accountBillingCity>
+	<AccountWrapper:accountBillingCountry>United States</AccountWrapper:accountBillingCountry>
+	<AccountWrapper:accountBillingPostalCode>CA 94105</AccountWrapper:accountBillingPostalCode>
+	<AccountWrapper:accountBillingState>California</AccountWrapper:accountBillingState>
+	<AccountWrapper:accountBillingStreet>The Landmark @ One Market, Suite 300</AccountWrapper:accountBillingStreet>
+	<AccountWrapper:accountDescription>Salesforce.com Inc.</AccountWrapper:accountDescription>
+	<AccountWrapper:accountExternalId>1001</AccountWrapper:accountExternalId>
+	<AccountWrapper:accountFax>(415) 901-7040</AccountWrapper:accountFax>
+	<AccountWrapper:accountIndustry>Technology</AccountWrapper:accountIndustry>
+	<AccountWrapper:accountName>Salesforce.com Inc.</AccountWrapper:accountName>
+	<AccountWrapper:accountPhone>1-800-NO-SOFTWARE</AccountWrapper:accountPhone>
+	<AccountWrapper:accountRating>Hot</AccountWrapper:accountRating>
+	<AccountWrapper:accountShippingCity xsi:nil="true" />
+	<AccountWrapper:accountShippingCountry xsi:nil="true" />
+	<AccountWrapper:accountShippingPostalCode xsi:nil="true" />
+	<AccountWrapper:accountShippingState xsi:nil="true" />
+	<AccountWrapper:accountShippingStreet xsi:nil="true" />
+	<AccountWrapper:accountType>Prospect</AccountWrapper:accountType>
+	<AccountWrapper:accountWebsite>https://www.salesforce.com</AccountWrapper:accountWebsite>
+</response>
+```
+
+</li>
+</ol>
+
+
+### Read a Record with "@HTTPGet" Method
+#### Return List of Custom Account Wrapper Class Records
+<ol type="1">
+<li><img src="supportedimages/AccountWrapper.png" /></li>
+<li><img src="supportedimages/HttpGet_Return_AccountWrapper.png" /></li>
+<li><b>Note: Both 15 or 18 Digit Salesforce Record Id works!</b></li>
+<li>HTTP Method = GET</li>	
+<li>URL = https://ap1.salesforce.com/services/apexrest/CustomRESTService/{Salesforce AccountId Here}</li>
+<li>HTTP Response Body
+</li>
+</ol>
+
+
+
+
+
+
+
+
 
 
 
 ### Create a Record with "@HttpPost" Method
+#### Return Standard Account Record
 <ol type="1">
 <li><img src="supportedimages/HttpPost.png" /></li>	
 <li>HTTP Method = POST</li>	
@@ -305,10 +391,8 @@ Follow these steps to test an Apex custom REST service:
 </li>
 </ol>
 
-
-
-
 ### Update a Record with "@HttpPatch" Method
+#### Return String
 <ol type="1">
 <li><img src="supportedimages/HttpPatch.png" /></li>
 <li>HTTP Method = PATCH</li>	
@@ -349,6 +433,7 @@ Follow these steps to test an Apex custom REST service:
 </ol>
 
 ### Upsert a Record with "@HttpPut" Method
+#### Return Standard Account Record
 <ol type="1">
 <li><img src="supportedimages/HttpPut.png" /></li>
 <li>HTTP Method = PUT</li>	
@@ -426,6 +511,7 @@ Follow these steps to test an Apex custom REST service:
 </ol>
 
 ### Delete a Record with "@HttpDelete" Method
+#### Return String
 <ol type="1">
 <li><img src="supportedimages/HttpDelete.png" /></li>
 <li>HTTP Method = DELETE</li>	
@@ -446,8 +532,10 @@ Follow these steps to test an Apex custom REST service:
 </li>
 </ol>
 
-## (8) Test (@isTest) class for Custom Apex REST API
 
+
+
+## (8) Test (@isTest) class for Custom Apex REST API
 
 ## (9) Useful Resources
 <ol type="a">
