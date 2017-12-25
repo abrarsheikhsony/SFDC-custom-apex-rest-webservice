@@ -480,21 +480,11 @@ Follow these steps to test an Apex custom REST service:
 </li>
 </ol>
 
-
-
-
-
-
-
-
-
-
-
 ### Create a Record with "@HttpPost" Method
 #### Return Standard Account Record
 <ol type="1">
 <li><img src="supportedimages/HttpPost.png" /></li>	
-<li>HTTP Method = POST</li>	
+<li>HTTP Method = GET</li>	
 <li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService</li>
 <li>HTTP Request Body = 
 
@@ -562,6 +552,23 @@ Follow these steps to test an Apex custom REST service:
 
 </li>
 </ol>
+
+### Create a Record with "@HttpPost" Method
+#### Return a Custom Account Wrapper Class Record
+<ol type="1">
+<li><img src="supportedimages/HTTPPost_AccountWrapper.png" /></li>
+<li><img src="supportedimages/HTTPPost_CustomRESTService.png" /></li>
+<li>HTTP Method = POST</li>	
+<li>URL = https://ap1.salesforce.com/services/apexrest/AccountRESTService</li>
+<li>HTTP Request Body = 
+
+</li>
+
+<li>HTTP Response Body = 
+</li>
+</ol>
+
+
 
 ### Update a Record with "@HttpPatch" Method
 #### Return String
